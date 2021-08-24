@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import api from '../../../../react_redux/src/services/api';
+import api from '../../services/api';
 
 interface CountieItem {
   id: number

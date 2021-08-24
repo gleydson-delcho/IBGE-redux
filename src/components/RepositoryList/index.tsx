@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 
 import { StateItem } from '../../store/ducks/ibgeApi/types';
-import { ApplicationState } from '../../../../react_redux/src/store';
 
 import * as RepositoriesActions from '../../store/ducks/ibgeApi/actions';
 
 import RepositoryItem from '../RepositoryItem';
 import IbgeCounties from '../IbgeCounties';
+import { ApplicationState } from '../../store';
 
 interface StateProps {
   states: StateItem[]
