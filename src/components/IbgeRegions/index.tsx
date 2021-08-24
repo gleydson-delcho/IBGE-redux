@@ -38,6 +38,7 @@ const IbgeRegions = () => {
         <div className="dados">
             <h1>Dados:</h1>
             {
+                districts ?
                 districts.map((item: RegionItem) => {
                     return <ul key={item.id}>
                         <li key={item.id}>
@@ -48,6 +49,8 @@ const IbgeRegions = () => {
                         </li>
                     </ul>
                 })
+                :
+                <p>Aguarde...</p>
             }
         </div>
     )

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
+import Styles from './styles.module.scss';
 
 interface CountieItem {
   id: number
@@ -27,18 +28,26 @@ const IbgeCounties = () => {
 
   const handleChange = (e: any) => {
     const countie = (e.target.value);
-    localStorage.setItem('Countie', JSON.stringify(countie))
+    localStorage.setItem('Countie', JSON.stringify(countie))    
     return countie;
   }
   return (
     <>
-      <label htmlFor="select">Selecione um estado: </label>
+    {
+      counties ?
+      <>
+
+      <label className={Styles.label} htmlFor="select">Selecione um estado: </label>
       <select onChange={handleChange}>
         <option value="">Selecionar</option>
         {counties.map((countie: CountieItem) => (
           <option key={countie.id} value={countie.id}>{countie.nome}</option>
         ))}
       </select>
+      </>
+      :
+      <p>Aguarde...</p>
+    }
     </>
   );
 }
