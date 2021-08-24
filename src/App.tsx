@@ -1,5 +1,5 @@
 import { Provider } from "react-redux";
-import IbgeCounties from "./components/IbgeCounties";
+import IbgeRegions from "./components/IbgeRegions";
 import RepositoryList from "./components/RepositoryList";
 import store from "./store";
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <Provider store={store}>
       <RepositoryList />
-      <IbgeCounties />
+      <IbgeRegions />
     </Provider>
   );
 }
